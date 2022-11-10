@@ -1,0 +1,8 @@
+Random rnd = new Random();
+            for (int i = 0; i<50; i++)
+            {
+                Console.WriteLine(rnd.Next());  //Herhangi bir int 
+                Console.WriteLine(rnd.Next(10));  //Üst sınıra kadar random sayı üretme
+                Console.WriteLine(rnd.Next(10, 50));  //alt sınır dahil, üst sınır dahil değil
+                Console.WriteLine(rnd.NextDouble());  //Random double sayılar üretir.
+            }
