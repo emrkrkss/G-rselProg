@@ -1,0 +1,27 @@
+ArrayList kolon = new ArrayList();
+            Random sayıuret = new Random();
+
+            int sayi;
+            for (int k = 0; k < 8; k++)
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    sayi = (sayıuret.Next(1, 50));
+                    if (kolon.Contains(sayi) == false)
+                    {
+                        kolon.Add(sayi);
+                    }
+                    else //Aynı sayı bulursa döngü i-- olur ve dongu aynı sayı olduğu sürece tüm sayılar farklı sayı olana dek dönsün
+                    {
+                        i--;
+                    }
+                }
+            }
+                kolon.Sort();
+                foreach (int eleman in kolon)
+                {
+                    Console.Write(eleman + " - ");
+                }
+                kolon.Clear(); Console.WriteLine();
+                Console.ReadKey();
+           
