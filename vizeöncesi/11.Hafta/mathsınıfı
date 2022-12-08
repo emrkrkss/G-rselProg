@@ -1,0 +1,148 @@
+SINIF
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace mathsınıfı081222
+{
+    class matematik
+    {
+        public int büyük_bul(int a, int b)
+        {
+            if (a>b)
+            {
+                return a;
+            }
+            else
+            {
+                return b;
+            }
+        }
+
+
+        public int küçük_bul(int a, int b)
+        {
+            if (a < b)
+            {
+                return a;
+            }
+            else
+            {
+                return b;
+            }
+        }
+
+
+        public int Mutlak_bul(int a)
+        {
+            if (a > 0)
+            {
+                return a;
+            }
+            else
+            {
+                return a*-1;
+            }
+        }
+
+
+        public int isaret_bul(int a)
+        {
+            if (a > 0)
+            {
+                return 1;
+            }
+            else if(a<0)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public int üs_bul(int taban, int üs)
+        {
+            int sonuc = 1;
+            for(int i=0; i<üs;i++)
+            {
+                sonuc = taban * sonuc;
+            }
+            return sonuc;
+        }
+
+        public int kök_bul(int sayi)
+        {
+            int kök = 1;
+            for(int i=0; i<sayi;i++)
+            {
+                if(i*i==sayi)
+                {
+                    kök = i;
+                    break; //Sayıya kadar döneceğinden boşa zaman israfı yapar. 
+                }
+            }
+            return kök;
+        }
+        
+    }
+}
+
+
+
+
+program.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace mathsınıfı081222
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            #region math sınıfları
+            //Sayısal metotlar
+            //Console.WriteLine("Büyük Bul: "+Math.Max(3, 5));
+            //Console.WriteLine("küçük Bul: " + Math.Min(3, 5));
+            //Console.WriteLine("Mutlak Bul: " + Math.Abs(-25));
+            //Console.WriteLine("İşaret Bul: " + Math.Sign(16));
+
+            //Yuvarlatma metotları
+            //double ondalık = 2.6589;
+            //Console.WriteLine("Yukarı Yuvarla: " + Math.Ceiling(ondalık));
+            //Console.WriteLine("Aşağı Yuvarla: " + Math.Floor(ondalık));
+            //Console.WriteLine("Sadece Yuvarla: " + Math.Round(ondalık));
+            //Console.WriteLine("Basamaklı Yuvarla: " + Math.Round(ondalık, 2)); //Virgulden sonra 2 basamak olsun
+
+            //Üstel Fonksiyonlar
+            //Console.WriteLine("Üs bulma: " + Math.Pow(4,3));
+            //Console.WriteLine("Karekök bulma: " + Math.Sqrt(10));
+            //Console.ReadKey();
+            #endregion
+
+            #region sayi_islemleri
+            //Sayısal islemler
+            matematik mt1 = new matematik();
+            Console.WriteLine("Büyük Bul Sınıflı= "+mt1.büyük_bul(3, 5));
+            Console.WriteLine("Küçük Bul Sınıflı= " + mt1.küçük_bul(3, 5));
+            Console.WriteLine("Mutlak Bul Sınıflı= " + mt1.Mutlak_bul(-10));
+            Console.WriteLine("İşaret Sınıflı= " + mt1.isaret_bul(-99));
+
+
+
+            //Üs - karekök işlemleri
+            Console.WriteLine("Üs bul Sınıflı= " + mt1.üs_bul(4, 3));
+            Console.WriteLine("Kök bul Sınıflı= " + mt1.kök_bul(625));
+            Console.ReadKey();
+            #endregion
+        }
+    }
+}
+
