@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Collections;
+using System.Threading.Tasks;
+
+namespace stringsınıfı151222
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string metin = "     İstanbul Aydın Üniversitesi     ";
+            string metinTS = metin.TrimStart(), metinTE = metin.TrimEnd();
+            string metinT = metin.Trim();
+
+            Console.WriteLine("Orjinal Boyut |{0}|", metin);
+            Console.WriteLine("Metin Boyut '{0}'\n", metin.Length);
+            Console.WriteLine("Trim start ile metin |{0}|\n", metinTS);
+            Console.WriteLine("Metin Boyut '{0}'\n", metinTS.Length);
+            Console.WriteLine("Trim end ile metin |{0}|\n", metinTE);
+            Console.WriteLine("Metin Boyut '{0}'\n", metinTE.Length);
+            Console.WriteLine("Trim ile metin |{0}|\n", metinT);
+            Console.WriteLine("Metin Boyut '{0}'\n", metinT.Length);
+            Console.WriteLine("Tümü küçük harf |{0}|\n", metin.ToLower());
+            Console.WriteLine("Tümü büyük harf |{0}|\n", metin.ToUpper());
+
+
+
+
+            string metin2 = "İstanbul Aydın Üniversitesi, Anadolu bil myo";
+            Console.WriteLine(metin2);
+            Console.WriteLine(metin2.Substring(29, 15));
+            Console.WriteLine(metin2.Insert(44, "Bilg. Tekn. Ve Prog."));
+            Console.WriteLine(metin2.Replace("Anadolu BİL MYO", "Mühendislik F."));
+            Console.WriteLine(metin2.Remove(27, 17));
+            Console.WriteLine(metin2.IndexOf("Aydın"));
+
+            string metin3 = "İstanbul Aydın Üniversitesi, Anadolu bil myo";
+            string[] dizi = metin3.Split(' ');
+            Console.WriteLine(metin3);
+
+
+            //Console.WriteLine("\n\nBilg. Tekn. Ve Prog.");
+            //foreach(string ifade in dizi)
+            //{
+            //    Console.WriteLine(ifade);
+            //}
+            //Console.WriteLine("\n\nAnadolu BİL MYO", "Mühendislik F.")); //burdan itibaren eksık pdf bak
+            //Console.WriteLine(metin2.Remove(27, 17));
+            //Console.WriteLine(metin2.IndexOf("Aydın"));
+
+
+            Console.Write("Br Metin gir: ");
+            string metin4 = Console.ReadLine();
+            Console.Write("\n{0} kaç karaktere tamamlansın? ", metin4);
+            int ksayisi = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n{0} için hangi karakter kullanılsın? ", metin4);
+            char karakter= Convert.ToChar(Console.ReadLine());
+            string metinPL = metin4.PadLeft(ksayisi, karakter);
+            string metinPR = metin4.PadRight(ksayisi, karakter);
+
+            Console.WriteLine("\n\nPardleft kullanıldığında {0} ", metinPL);
+            Console.WriteLine("\n\nPardRight kullanıldığında {0} ", metinPR);
+
+
+
+
+            Console.ReadKey();
+
+
+        }
+    }
+}
