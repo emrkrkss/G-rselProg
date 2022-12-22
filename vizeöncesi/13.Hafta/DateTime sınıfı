@@ -1,0 +1,108 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _221222stringsınıfıdevam
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Static kullanım
+            //Console.Write("\nŞimdi {0} dır.", DateTime.Now);
+            //Console.Write("\nBugünün tarihi {0} dır.", DateTime.Today);
+            //Console.Write("\nYılın {0}. günü.", DateTime.Today.DayOfYear);
+            //Console.Write("\nHaftanın {0}. günüdür.", DateTime.Today.DayOfWeek);
+
+
+            //DateTime dtarih = new DateTime();
+            //dtarih = DateTime.Now;
+
+            //Console.Write("\nŞimdi {0} ", dtarih);
+            //Console.Write("\nŞuanda günün {0}.saatidir.", dtarih.Hour);
+            //Console.Write("\nŞuanda günün {0}.dakikasıdır.", dtarih.Minute);
+            //Console.Write("\nŞuanda günün {0}.saniyesidir.", dtarih.Second);
+            //Console.Write("\nŞuanda günün {0}.milisaniyesidir.", dtarih.Millisecond);
+
+
+            //DateTime obtarih = new DateTime();
+            //obtarih = DateTime.Today;
+
+            //Console.Write("Kaç gün öncesinin tarihini görmek istiyorsunuz? ");
+            //int gun = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Kaç ay sonrasının tarihini görmek istiyorsunuz? ");
+            //int ay = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Kaç yıl öncesinin tarihini görmek istiyorsunuz? ");
+            //int yıl = Convert.ToInt32(Console.ReadLine());
+
+            //Console.Write("\n{0} gün önceki tarih {1}", gun, obtarih.AddDays(-gun));
+            //Console.Write("\n{0} ay sonraki tarih {1}", ay, obtarih.AddMonths(ay));
+            //Console.Write("\n{0} yıl önceki tarih {1}", yıl, obtarih.AddYears(-yıl));
+
+
+            //DateTime t = new DateTime();
+            //t = DateTime.Today;
+            //int z = 200;
+
+
+            //Console.Write("\n{0}'dan {1} saat sonrası {2}'dir ", t, z, t.AddHours(z));
+            //Console.Write("\n{0}'dan {1} dak. öncesi {2}'dir ", t, z, t.AddMinutes(-z));
+            //Console.Write("\n{0}'dan {1} san. sonrası {2} dir ", t, z, t.AddSeconds(z));
+
+
+            //int bas = 2000;
+            //int bit = 2024;
+            //int sayac = 0;
+
+            //Console.Write("Şubat 29 olan yıllar: \n");
+            //for(int i=bas;i<=bit;i++)
+            //{
+            //    if (DateTime.IsLeapYear(i))
+            //    {
+            //        Console.WriteLine(i.ToString());
+            //        sayac++;
+            //    }
+            //}
+            //Console.WriteLine("Toplam {0} yılda şubat 29 gündür.", sayac);
+
+
+
+            //int bas = 2000;
+            //int bit = 2024;
+            //int sayac = 0;
+
+            //for (int i = bas; i <= bit; i++)
+            //{
+            //    for (int k = 1; k <= 12; k++)
+            //    {
+            //        if (DateTime.DaysInMonth(i,k)==30)
+            //        {
+            //            sayac++;
+            //        }
+            //    }
+
+            //}
+            //Console.WriteLine("Toplam {0} adet 30 çeken ay vardır.", sayac);
+
+
+
+            Console.Write("Doğum taihinizi giriniz? ");
+            DateTime dt = Convert.ToDateTime(Console.ReadLine());
+
+            double topgun = DateTime.Now.Subtract(dt).TotalDays;
+            double topsaat = DateTime.Now.Subtract(dt).TotalHours;
+            double topdak = DateTime.Now.Subtract(dt).TotalMinutes;
+
+            Console.Write("\nToplam yaşadığınız gün : {0}", Math.Ceiling(topgun));
+            Console.Write("\nToplam yaşadığınız saat : {0}", Math.Ceiling(topsaat));
+            Console.Write("\nToplam yaşadığınız dakika : {0}", Math.Ceiling(topdak));
+            Console.ReadKey();
+
+
+
+        }
+    }
+}
