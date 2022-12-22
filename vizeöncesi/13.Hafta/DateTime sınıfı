@@ -89,16 +89,29 @@ namespace _221222stringsınıfıdevam
 
 
 
-            Console.Write("Doğum taihinizi giriniz? ");
-            DateTime dt = Convert.ToDateTime(Console.ReadLine());
+            //Console.Write("Doğum taihinizi giriniz? ");
+            //DateTime dt = Convert.ToDateTime(Console.ReadLine());
 
-            double topgun = DateTime.Now.Subtract(dt).TotalDays;
-            double topsaat = DateTime.Now.Subtract(dt).TotalHours;
-            double topdak = DateTime.Now.Subtract(dt).TotalMinutes;
+            //double topgun = DateTime.Now.Subtract(dt).TotalDays;
+            //double topsaat = DateTime.Now.Subtract(dt).TotalHours;
+            //double topdak = DateTime.Now.Subtract(dt).TotalMinutes;
 
-            Console.Write("\nToplam yaşadığınız gün : {0}", Math.Ceiling(topgun));
-            Console.Write("\nToplam yaşadığınız saat : {0}", Math.Ceiling(topsaat));
-            Console.Write("\nToplam yaşadığınız dakika : {0}", Math.Ceiling(topdak));
+            //Console.Write("\nToplam yaşadığınız gün : {0}", Math.Ceiling(topgun));
+            //Console.Write("\nToplam yaşadığınız saat : {0}", Math.Ceiling(topsaat));
+            //Console.Write("\nToplam yaşadığınız dakika : {0}", Math.Ceiling(topdak));
+
+
+            //string tarih = "November 28 2009 Saturday";
+            //DateTime t1 = DateTime.Parse(tarih);
+            //DateTime t2 = Convert.ToDateTime(tarih);
+
+            //Console.WriteLine("\nParse ile çevrilirse --> {0}",t1);
+            //Console.WriteLine("\nConvert ile çevrilirse --> {0}", t2);
+
+
+            //DateTime.Now.ToString("F"); //long tıme vs vs önemli
+            
+
             Console.ReadKey();
 
 
